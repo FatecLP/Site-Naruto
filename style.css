@@ -1,41 +1,74 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.container{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    gap: 10px;
-  }
-  .card-top{
-    display: flex;
-    gap: 10px;
-  }
-  .card-bottom{
-    display: flex;
-    gap: 10px;
-  }
-  nav{
-    height: 60px;
-    background-color: #ef8635;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .intern-nav{
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-  }
-  .home{
-    margin-left: 20px;
-  }
-  .profile{
-    margin-right: 20px;
-    align-items: center;
-  }
-  .user{
-    font-size: 25px;
-  }
+body {
+  background-color: #292828;
+}
+nav {
+  height: 70px;
+  background-color: #434141;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+h1 {
+  color: #fff;
+  font-family: "Knewave";
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: auto;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.card-top {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card-bottom {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.intern-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+.home {
+  cursor: pointer;
+  margin-bottom: 8px;
+  margin-right: 40px;
+}
+.profile {
+  margin-left: 50px;
+}
+.user {
+  font-size: 30px;
+}
+.akatsuki {
+  width: 70px;
+  margin-right: 15px;
+}
+.title {
+  display: flex;
+  margin-left: 20px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  text-decoration: none;
+  color: #fff;
+}
