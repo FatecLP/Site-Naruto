@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 10px;
+  }
+  .card-top{
+    display: flex;
+    gap: 10px;
+  }
+  .card-bottom{
+    display: flex;
+    gap: 10px;
+  }
+  nav{
+    height: 60px;
+    background-color: #ef8635;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .intern-nav{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  .home{
+    margin-left: 20px;
+  }
+  .profile{
+    margin-right: 20px;
+    align-items: center;
+  }
+  .user{
+    font-size: 25px;
+  }
