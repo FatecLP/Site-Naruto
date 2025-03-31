@@ -64,11 +64,14 @@ h1 {
   display: flex;
   margin-left: 20px;
 }
-a {
+a{
   text-decoration: none;
   color: #fff;
 }
 a:hover {
   text-decoration: none;
   color: #fff;
+}
+h6, a{
+  text-decoration: none;
 }
