@@ -1,3 +1,19 @@
+@media(max-width: 600px){
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  nav{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+  }
+  h1{
+    display: none;
+  }
+
+}
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +23,6 @@ body {
   background-color: #292828;
 }
 nav {
-  height: 70px;
   background-color: #434141;
   display: flex;
   align-items: center;
@@ -52,6 +67,7 @@ h1 {
 }
 .profile {
   margin-left: 50px;
+  margin-right: 50px;
 }
 .user {
   font-size: 30px;
@@ -74,4 +90,10 @@ a:hover {
 }
 h6, a{
   text-decoration: none;
+}
+.title a {
+  display: flex;
+}
+.fa-cart-shopping{
+  font-size: 20px;
 }
