@@ -52,6 +52,6 @@ Adicionadas via CDN:
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE.txt) para detalhes.
 
 **Nota:** Projeto educacional. Personagens pertencem a seus criadores.
