@@ -5,6 +5,13 @@
 
 ![Akatsuki Logo](img/Akatsuki.png)
 
+## Nomes dos Integrantes
+- André Diogo Melchior da Silva
+- Juan Pablo Firmino Ferreira
+- Michael Akira de Lima Kuwahara
+- Murilo de Oliveira Sartori
+- Nickolas Lopes Araújo
+
 ## 📝 Descrição do Projeto
 
 **Akatsuki's Shop** é um e-commerce temático baseado na organização Akatsuki do anime Naruto. O site oferece diversos produtos inspirados nos personagens, incluindo acessórios, roupas e itens de colecionador.
