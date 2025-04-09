@@ -220,6 +220,8 @@ address {
     align-items: center;
 }
 address h4 {
+    font-family: inter;
+    font-weight: var(--medium-inter);
     color: var(--text-color);
     margin: 0;
 }
