@@ -98,3 +98,16 @@ h6, a{
 .fa-cart-shopping{
   font-size: 20px;
 }
+
+.carousel-control-prev-icon.bg-dark,
+.carousel-control-next-icon.bg-dark {
+    background-color: #292828 !important;
+    padding: 1.2rem;
+    border-radius: 50%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    background: none;
+}
