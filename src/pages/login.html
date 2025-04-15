@@ -4,17 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entrar</title>
-    <link rel="stylesheet" href="stylelogin.css">
+    <link rel="stylesheet" href="/src/partials/components/stylelogin.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body class="bodylogin">
-    <header>
-        <div class="container" style="display: flex; margin-top: 20px;">
-            <div>
+    <header class="navigation">
+        <div class="title">
+            <a href="index.html">
+                <img
+                    src="./assets/img/Akatsuki.png"
+                    alt="Akatsuki simbol"
+                    class="akatsuki"
+                />
+                <h1>Akatsuki's Shop</h1>
+            </a>
+        </div>
+        <div class="intern-nav">
+            <div class="home">
+                <i class="fa-solid fa-house" style="margin-top: 2px"></i>
                 <a href="index.html">
-                    <img src="img/Akatsuki.png" style="width: 40px; margin-right: 10px;" alt="home">
+                    <h6>Home</h6>
                 </a>
-                <a href="index.html" class="btn-sm btn-outline-primary botaoHome">Home</a>
+            </div>
+            <div class="about">
+                <i class="fa-solid fa-users" style="margin-top: 2px"></i>
+
+                <a href="./src/pages/aboutus.html"><h6>Sobre nós</h6> </a>
+            </div>
+            <div class="profile">
+                <a href="./src/pages/login.html">
+                    <i id="user" class="fa-solid fa-circle-user user"></i>
+                </a>
+            </div>
+            <div class="cart">
+                <i id="cart" class="fa-solid fa-cart-shopping"></i>
             </div>
         </div>
     </header>

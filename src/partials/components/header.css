@@ -1,0 +1,17 @@
+@import url(./src/partials/styles/colors.css);
+
+header {
+    height: 80px;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-color);
+}
+
+h1 {
+    color: var(--text-color);
+    font-size: 21px;
+    font-family: "Knewave";
+    margin-bottom: 0 !important;
+}

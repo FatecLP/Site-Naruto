@@ -1,102 +1,123 @@
-@media(max-width: 600px){
-  * {
+@import url(./src/partials/styles/colors.css);
+@import url(./src/partials/styles/fonts.css);
+@import url(./src/partials/components/header.css);
+
+@media (max-width: 600px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+    }
+    h1 {
+        display: none;
+    }
+}
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  nav{
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.container {
     display: flex;
     flex-direction: column;
-    height: 100px;
-  }
-  h1{
-    display: none;
-  }
-
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background-color: #292828;
-}
-nav {
-  background-color: #434141;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #fff;
-}
-h1 {
-  color: #fff;
-  font-family: "Knewave";
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: auto;
-  flex-wrap: wrap;
-  margin-top: 50px;
+    gap: 20px;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .card-top {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .card-bottom {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .intern-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-right: 20px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 65px;
 }
 .home {
-  cursor: pointer;
-  margin-bottom: 8px;
-  margin-right: 40px;
-}
-.profile {
-  margin-left: 50px;
-  margin-right: 50px;
-}
-.user {
-  font-size: 30px;
-}
-.akatsuki {
-  width: 70px;
-  margin-right: 15px;
-}
-.title {
-  display: flex;
-  margin-left: 20px;
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+    margin-top: 5px;
 }
 
-a{
-  text-decoration: none;
-  color: #fff;
+.profile {
+    margin-left: 50px;
+}
+.user {
+    font-size: 30px;
+}
+.about {
+    display: flex;
+    margin-top: 5px;
+    gap: 15px;
+}
+.akatsuki {
+    width: 70px;
+}
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+.home a {
+    border-bottom: 1.5px solid white;
+}
+a {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.4s;
+}
+a h6 {
+    font-family: inter;
+    font-weight: var(--regular-inter);
+}
+.home a:hover,
+.about a:hover {
+    text-decoration: none;
+    color: var(--akatsuki-color);
 }
 a:hover {
-  text-decoration: none;
-  color: #fff;
+    text-decoration: none;
+    color: var(--text-color);
 }
-h6, a{
-  text-decoration: none;
+h6,
+a {
+    text-decoration: none;
+    margin: 0;
 }
 .title a {
-  display: flex;
+    display: flex;
 }
-.fa-cart-shopping{
-  font-size: 20px;
+.fa-cart-shopping {
+    font-size: 20px;
 }
 
 .carousel-control-prev-icon.bg-dark,
@@ -110,4 +131,110 @@ h6, a{
 .carousel-control-next {
     width: 5%;
     background: none;
+}
+
+.image {
+    height: 600px;
+    background: url(https://wallpapers.com/images/hd/akatsuki-members-naruto-itachi-uchiha-4k-4xfoiebjxeyw1a7p.jpg)
+        no-repeat top center/cover;
+    position: relative;
+}
+.mod {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 84%;
+    display: flex;
+}
+.titulo {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: end;
+    align-items: center;
+}
+.titulo h2 {
+    margin-bottom: 10px;
+    font-size: 45px;
+    font-family: inter;
+    font-weight: var(--bold-inter);
+    color: var(--text-color);
+}
+.titulo p {
+    margin-bottom: 40px;
+    font-size: 25px;
+    font-family: inter;
+    font-weight: var(--light-inter);
+    color: var(--text-color);
+}
+
+.button-contact {
+    padding: 14px 20px;
+    color: #ffffff;
+    background-color: var(--akatsuki-color);
+    font-family: inter;
+    font-weight: var(--medium-inter);
+    border: 0;
+    font-size: 18px;
+    margin: 14px 0;
+    transition: animation 0.2s;
+    transition: box-shadow 0.8s;
+    text-transform: uppercase;
+    margin-bottom: 140px;
+}
+.button-contact:hover {
+    animation: scaleButton 0.8s alternate infinite;
+    box-shadow: 0 0 10px 0 #d94140;
+}
+
+#user {
+    transition: all 0.2s;
+}
+#user:hover {
+    animation: scaleButton 0.8s alternate infinite;
+    text-shadow: 0 0 8px #e9656b;
+    color: var(--akatsuki-color);
+}
+
+#cart {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#cart:hover {
+    animation: scaleButton 0.8s alternate infinite;
+    text-shadow: 0 0 8px #e9656b;
+    color: var(--akatsuki-color);
+}
+
+@keyframes scaleButton {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.07);
+    }
+}
+
+footer {
+    height: 100px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+address {
+    display: flex;
+    align-items: center;
+}
+address h4 {
+    font-family: inter;
+    font-weight: var(--medium-inter);
+    color: var(--text-color);
+    margin: 0;
 }
