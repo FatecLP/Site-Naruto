@@ -1,63 +1,73 @@
-footer{
-    color: #f2f2f2;
-    margin-left: 1400px;
-    margin-top: 100px;
-}
-.bodylogin{
-    background-color: #292828;
+@import url(header.css);
+@import url(/src/partials/styles/colors.css);
+
+body {
+    background-color: var(--bg-color);
 }
 
-.titulo-login{
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+main{
+    width: 70%;
+    margin: 5px auto;
 }
 
-.botaoHome{
-    font-family: Arial, Helvetica, sans-serif
-}
-
-.formlogin{
+form{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 500px;
     gap: 10px;
 }
 
+button{
+    width: 12%;
+    margin-top: 30px;
+}
+
+
+.titulo-login{
+    font-size: 40px;
+    color: var(--text-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px !important;
+}
+
 .input-login{
-    width: 200px;
+    width: 320px;
     height: 30px;
     border-radius: 5px;
     border: none;
     padding: 5px;
+    transition: all 0.2s;
 }
+
+.input-login:focus{
+    width: 370px;
+}
+
+.form-group{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: left;
+}
+
+label, .form-group small{
+    color: var(--text-color) !important;
+}
+
 #senha{
-    width: 290px;
+    width: 320px;
 }
 .link-recuperar{
     display: flex;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
 }
 
 .link-cadastro{
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.botao-login{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f2f2f2;
-    color: black;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
 }
