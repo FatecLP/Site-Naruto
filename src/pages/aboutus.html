@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet"
+    />
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
     <link
@@ -18,40 +23,41 @@
     rel="stylesheet"/>
     
     <link rel="stylesheet" href="/src/partials/components/styleSobreNos.css"/>
-    <link rel="stylesheet" href="/style.css"/>
     <title>Sobre nós</title>
 </head>
 <body>
   <header class="navigation">
     <div class="title">
-      <a href="index.html">
-        <img src="/assets/img/Akatsuki.png" alt="Akatsuki simbol" class="akatsuki" />
-        <h1>Akatsuki's Shop</h1>
-      </a>
+        <a href="/index.html">
+            <img
+                src="/assets/img/Akatsuki.png"
+                alt="Akatsuki simbol"
+                class="akatsuki"
+            />
+            <h1>Akatsuki's Shop</h1>
+        </a>
     </div>
     <div class="intern-nav">
-      <div class="home">
-        <i class="fa-solid fa-house" style="margin-top: 2px;"></i>
-        <a href="/index.html">
-            <h6>
-              Home
-            </h6>
-          </a>
-      </div>
-      <div class="about">
-        <i class="fa-solid fa-users" style="margin-top: 2px;"></i>
-        <h6>
-          <a href="aboutus.html">Sobre nós</a>
-        </h6>
-      </div>
-      <div class="profile">
-        <a href="login.html">
-          <i class="fa-solid fa-circle-user user"></i>
-        </a>
-      </div>
-      <div class="cart">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </div>
+        <div class="home">
+            <i class="fa-solid fa-house" style="margin-top: 2px; font-size: 16px;"></i>
+            <a href="/index.html">
+                <h6>Home</h6>
+            </a>
+        </div>
+        <div class="about">
+            <i class="fa-solid fa-users" style="margin-top: 2px; font-size: 16px;"></i>
+            <a href="/src/pages/aboutus.html">
+              <h6>Sobre nós</h6>
+            </a>
+        </div>  
+        <div class="profile">
+            <a href="/src/pages/login.html">
+                <i id="user" class="fa-solid fa-circle-user user"></i>
+            </a>
+        </div>
+        <div class="cart">
+            <i id="cart" class="fa-solid fa-cart-shopping"></i>
+        </div>
     </div>
   </header>
     <main class="card" >

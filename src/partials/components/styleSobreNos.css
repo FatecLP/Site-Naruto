@@ -1,9 +1,15 @@
+@import url(header.css);
+@import url(/src/partials/styles/fonts.css);
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
+body {
+    background-color: var(--bg-color);
+}
 
 main{
     width: 90vw;
@@ -34,7 +40,10 @@ div.about{
     text-align: center;
 }
 
-div.home{
-    font-size: 1.4em;
-    margin: 10px;
+.home a {
+    border-bottom: none;
+}
+
+.about a {
+    border-bottom: 1.5px solid white;
 }

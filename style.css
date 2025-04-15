@@ -3,12 +3,7 @@
 @import url(./src/partials/components/header.css);
 
 @media (max-width: 600px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    nav {
+    header {
         display: flex;
         flex-direction: column;
         height: 100px;
@@ -49,90 +44,6 @@ body {
     justify-content: center;
 }
 
-.intern-nav {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 65px;
-}
-.home {
-    display: flex;
-    gap: 15px;
-    cursor: pointer;
-    margin-top: 5px;
-}
-
-.profile {
-    margin-left: 50px;
-}
-.user {
-    font-size: 30px;
-}
-.about {
-    display: flex;
-    margin-top: 5px;
-    gap: 15px;
-}
-.akatsuki {
-    width: 70px;
-}
-.title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 50px;
-}
-.home a {
-    border-bottom: 1.5px solid white;
-}
-a {
-    gap: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-decoration: none;
-    color: var(--text-color);
-    transition: all 0.4s;
-}
-a h6 {
-    font-family: inter;
-    font-weight: var(--regular-inter);
-}
-.home a:hover,
-.about a:hover {
-    text-decoration: none;
-    color: var(--akatsuki-color);
-}
-a:hover {
-    text-decoration: none;
-    color: var(--text-color);
-}
-h6,
-a {
-    text-decoration: none;
-    margin: 0;
-}
-.title a {
-    display: flex;
-}
-.fa-cart-shopping {
-    font-size: 20px;
-}
-
-.carousel-control-prev-icon.bg-dark,
-.carousel-control-next-icon.bg-dark {
-    background-color: #292828 !important;
-    padding: 1.2rem;
-    border-radius: 50%;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    width: 5%;
-    background: none;
-}
-
 .image {
     height: 600px;
     background: url(https://wallpapers.com/images/hd/akatsuki-members-naruto-itachi-uchiha-4k-4xfoiebjxeyw1a7p.jpg)
@@ -146,7 +57,7 @@ a {
     top: 0;
     left: 0;
     background-color: black;
-    opacity: 84%;
+    opacity: 65%;
     display: flex;
 }
 .titulo {
@@ -192,25 +103,6 @@ a {
     box-shadow: 0 0 10px 0 #d94140;
 }
 
-#user {
-    transition: all 0.2s;
-}
-#user:hover {
-    animation: scaleButton 0.8s alternate infinite;
-    text-shadow: 0 0 8px #e9656b;
-    color: var(--akatsuki-color);
-}
-
-#cart {
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-#cart:hover {
-    animation: scaleButton 0.8s alternate infinite;
-    text-shadow: 0 0 8px #e9656b;
-    color: var(--akatsuki-color);
-}
 
 @keyframes scaleButton {
     from {
