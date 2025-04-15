@@ -3,7 +3,7 @@
 [![Status do Projeto](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)]()
 [![GitHub last commit](https://img.shields.io/github/last-commit/FatecLP/Site-Naruto)]()
 
-![Akatsuki Logo](img/Akatsuki.png)
+<img height="275px" src="assets/img/Akatsuki.png">
 
 ## Nomes dos Integrantes
 - André Diogo Melchior da Silva
@@ -19,13 +19,15 @@
 ## 💻 Tecnologias Utilizadas
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)]()
+[![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&logoColor=white)]()
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white)]()
 [![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?logo=font-awesome&logoColor=white)]()
 
-- **HTML5** - Estrutura do site
-- **Bootstrap 5** - Framework para design responsivo
-- **Font Awesome 6** - Ícones
-- **Google Fonts** - Fonte Knewave
+- **HTML5** - Estrutura de conteúdo do site
+- **CSS3** - Folha de estillos para estilização do site
+- **Bootstrap 5** - Framework para design e componentes responsivos
+- **Font Awesome 6** - Biblioteca para Ícones
+- **Google Fonts** - Fonte Knewave e Inter
 
 
 ## ✨ Funcionalidades
