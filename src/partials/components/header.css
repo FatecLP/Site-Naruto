@@ -3,11 +3,14 @@
 
 header {
     height: 80px;
+    width: 100%;
     background-color: var(--secondary-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: var(--text-color);
+    position: fixed;
+    z-index: 1;
 }
 
 h1 {
