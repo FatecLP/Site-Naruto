@@ -1,6 +1,7 @@
 @import url(./src/partials/styles/colors.css);
 @import url(./src/partials/styles/fonts.css);
 @import url(./src/partials/components/header.css);
+@import url(./src/partials/components/footer.css);
 
 @media (max-width: 600px) {
     header {
@@ -124,22 +125,4 @@ body {
  .carousel-control-next {
     width: 5%;
     background: none;
-}
-
-footer {
-    height: 100px;
-    background-color: var(--secondary-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-address {
-    display: flex;
-    align-items: center;
-}
-address h4 {
-    font-family: inter;
-    font-weight: var(--medium-inter);
-    color: var(--text-color);
-    margin: 0;
 }

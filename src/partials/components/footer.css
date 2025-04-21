@@ -1,0 +1,21 @@
+@import url(/src/partials/styles/colors.css);
+@import url(/src/partials/styles/fonts.css);
+
+footer {
+    height: 100px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+address {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+address h4 {
+    font-family: inter;
+    font-weight: var(--medium-inter);
+    color: var(--text-color);
+    margin: 0;
+}
