@@ -1,6 +1,6 @@
 @import url(header.css);
 @import url(footer.css);
-@import url(/src/partials/styles/colors.css);
+@import url(../styles/colors.css);
 
 body {
     background-color: var(--bg-color);
