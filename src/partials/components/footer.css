@@ -16,6 +16,8 @@ address {
 address h4 {
     font-family: inter;
     font-weight: var(--medium-inter);
+    font-size: 20px;
     color: var(--text-color);
     margin: 0;
+    font-style: normal;
 }

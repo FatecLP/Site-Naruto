@@ -1,4 +1,5 @@
 @import url(header.css);
+@import url(footer.css);
 @import url(/src/partials/styles/colors.css);
 
 body {
@@ -17,6 +18,7 @@ form{
     align-items: center;
     height: 500px;
     gap: 10px;
+    margin-top: 40px;
 }
 
 button{
