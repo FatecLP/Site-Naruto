@@ -38,7 +38,7 @@
         />
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body>
+    <body onload="data_base()">
         <header class="navigation" style="position: fixed;">
             <div class="title">
                 <a href="index.html">
@@ -68,7 +68,9 @@
                     </a>
                 </div>
                 <div class="cart">
-                    <i id="cart" class="fa-solid fa-cart-shopping"></i>
+                    <a href="src/pages/carrinho.html">
+                        <i id="cart" class="fa-solid fa-cart-shopping"></i>
+                    </a>
                 </div>
             </div>
         </header>

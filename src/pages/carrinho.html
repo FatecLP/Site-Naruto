@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Knewave&display=swap"
+        rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+            crossorigin="anonymous"
+           
+        />
+         <link rel="stylesheet" href="../../style.css">
+         <link rel="stylesheet" href="../partials/components/cart.css">
+         <script src="../scripts/login.js"></script>
+</head>
+<body onload="logado()">
+    <header class="navigation">
+    <div class="title">
+        <a href="../../index.html">
+            <img
+                src="../../assets/img/Akatsuki.png"
+                alt="Akatsuki simbol"
+                class="akatsuki"
+            />
+            <h1>Akatsuki's Shop</h1>
+        </a>
+    </div>
+    <div class="intern-nav">
+        <div class="home">
+            <i class="fa-solid fa-house" style="margin-top: 2px; font-size: 16px;"></i>
+            <a href="../../index.html">
+                <h6>Home</h6>
+            </a>
+        </div>
+        <div class="about">
+            <i class="fa-solid fa-users" style="margin-top: 2px; font-size: 16px;"></i>
+            <a href="../pages/aboutus.html">
+              <h6>Sobre nós</h6>
+            </a>
+        </div>  
+        <div class="profile">
+            <a href="../pages/login.html">
+                <i id="user" class="fa-solid fa-circle-user user"></i>
+            </a>
+        </div>
+        <div class="cart">
+            <i id="cart" class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </div>
+  </header>
+  <h1 class="saudacao">Bem-vindo ao carrinho <span id="nome-usuario"></span>!</h1>
+</body>
+</html>
