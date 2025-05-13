@@ -3,9 +3,9 @@
 [![Status do Projeto](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)]()
 [![GitHub last commit](https://img.shields.io/github/last-commit/FatecLP/Site-Naruto)]()
 
-<img height="275px" src="assets/img/Akatsuki.png">
+<img height="275rem" src="assets/img/Akatsuki.png">
 
-## Nomes dos Integrantes
+## :busts_in_silhouette: Nomes dos Integrantes
 - André Diogo Melchior da Silva
 - Juan Pablo Firmino Ferreira
 - Michael Akira de Lima Kuwahara
@@ -14,7 +14,8 @@
 
 ## 📝 Descrição do Projeto
 
-**Akatsuki's Shop** é um e-commerce temático baseado na organização Akatsuki do anime Naruto. O site oferece diversos produtos inspirados nos personagens, incluindo acessórios, roupas e itens de colecionador.
+**Akatsuki's Shop** é um e-commerce temático baseado na organização Akatsuki do anime Naruto. O site oferece diversos produtos inspirados nos personagens, incluindo acessórios, roupas e itens de colecionador. <br><br>
+Para acessar o projeto online <strong>clique [AQUI](https://fateclp.github.io/Site-Naruto/index.html)</strong> :point_left:
 
 ## 💻 Tecnologias Utilizadas
 
