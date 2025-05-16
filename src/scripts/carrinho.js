@@ -1,39 +1,19 @@
-const botoes = document.getElementsByClassName('btn btn-primary')
-const botoesArray = Array.from(botoes)
-
-function adicionarCarrinho() {
-    botoesArray.forEach(botao => {
-        botao.addEventListener('click', function() {
-            const divProduto = this.closest('.card')
-            if (divProduto) {
-                const imagem = divProduto.querySelector('.card-img-top')
-                const nome = divProduto.querySelector('.card-title')
-                const valor = divProduto.querySelector('.card-text')
-                if (imagem && nome && valor) {
-                    const imagemSrc = imagem.src
-                    const nomeContent = nome.textContent
-                    const valorContent = valor.textContent
-
-                    const carrinhoStorage = {
-                        img : imagemSrc,
-                        nome : nomeContent,
-                        valor : valorContent
-                    };
-
-                    let json = JSON.stringify(carrinhoStorage)
-
-                    localStorage.setItem('carrinhoDados', json)
-                }
-                else {
-                    console.error('não foram encontradas os atributos dos elementos.')
-                }
-            } else {
-                console.error('não foi encontrada a divProduto.')
-            }
-        })
-    })
+const lista_produto = []
+function add_cart(ind){
+    const img = document.querySelectorAll('.card img')[ind].getAttribute('src')
+    const nome_produto = document.querySelectorAll('.card .card-title')[ind].innerHTML
+    const preco_produto = document.querySelectorAll('.card .card-text')[ind].innerHTML
+    let produto = {id:ind, image:img, nome:nome_produto, preco:preco_produto}
+    lista_produto.push(produto)
+    const dados = JSON.stringify(lista_produto)
+    sessionStorage.setItem('produtos', dados)
+    
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    adicionarCarrinho();
-});
+function show_products(){
+    let elementos = JSON.parse(sessionStorage.getItem('produtos'))
+    sessionStorage.setItem('dados_prod', elementos.image)
+    let vitrine = document.querySelector('.show-products')
+    console.log(elementos)
+
+}
