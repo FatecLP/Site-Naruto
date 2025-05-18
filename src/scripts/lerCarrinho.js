@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     totalElement.style.marginTop = '20px'; // adiciona uma margem superior
     lista.appendChild(totalElement); // adiciona o total ao final da lista
 
-    // cria o botão de finalizar compra
+    // finalizar compra
     const botaoFinalizar = document.createElement('button'); // cria um botão para finalizar a compra
     botaoFinalizar.innerHTML = 'Finalizar Compra'; // define o texto do botão
     botaoFinalizar.classList.add('btn', 'btn-success'); // adiciona as classes btn e btn-success
@@ -52,6 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // verifica se ta logado
         if (estaLogado()) { 
             alert('Compra finalizada com sucesso!');
+            localStorage.removeItem('carrinhoDados'); // limpa o carrinho
+            location.reload(); // recarrega a página para atualizar a lista
         } else {
             alert('Você precisa estar logado para finalizar a compra!');
             window.location.href = "../pages/login.html"; // redireciona para a página de login
@@ -59,13 +61,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     lista.appendChild(botaoFinalizar);
 
-    // cria o botão de limpar carrinho
+    // limpar carrinho
     const botaoLimpar = document.createElement('button'); // cria um botão para limpar o carrinho
     botaoLimpar.innerHTML = 'Limpar Carrinho'; // define o texto do botão
     botaoLimpar.classList.add('btn', 'btn-danger'); // adiciona as classes btn e btn-danger
     botaoLimpar.addEventListener('click', function() { // adiciona o evento de click no botão
         localStorage.removeItem('carrinhoDados'); // remove os dados do carrinho do localStorage
-        location.reload(); // recarrega a página para atualizar a lista
+        location.reload();
     });
     lista.appendChild(botaoLimpar);
 });
