@@ -1,3 +1,7 @@
+if (!localStorage.getItem("bancodedados")) {
+  data_base();
+}
+
 function data_base() {
   let db = [
     { id: 1, usuario: "Konan", email: "konan@mail", senha: 1234 },
@@ -17,11 +21,13 @@ function logar(event){
   let dados = JSON.parse(localStorage.getItem("bancodedados"));
 
   for (let i = 0; i < dados.length; i++) {
-    if (mail == dados[i].email && sn == dados[i].senha){
+    if (mail == dados[i].email && sn == String(dados[i].senha)){
+      sessionStorage.setItem("usuario", dados[i].usuario);
       window.location.href = "carrinho.html";
-      sessionStorage.setItem("usuario", dados[i].usuario)
+      return
     }
   }
+  alert("E-mail ou senha incorretos!");
 }
 
 function logado(){
