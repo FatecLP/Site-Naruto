@@ -30,11 +30,6 @@ function logar(event){
   alert("E-mail ou senha incorretos!");
 }
 
-function logado(){
-    const user = sessionStorage.getItem("usuario")
-    document.querySelector("#nome-usuario").innerHTML = user
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     if (window.location.pathname.includes('login.html')) {
       const usuario = sessionStorage.getItem("usuario");

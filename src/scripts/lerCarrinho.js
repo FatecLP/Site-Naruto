@@ -3,6 +3,9 @@ function estaLogado() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    const user = sessionStorage.getItem('usuario') || 'usuário';
+    document.getElementById("nome-usuario").innerText = user;
+    
     const lista = document.getElementById('lista-carrinho'); // seleciona o elemento onde os produtos do carrinho serão exibidos
     const carrinho = JSON.parse(localStorage.getItem('carrinhoDados')) || [];
 

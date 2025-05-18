@@ -1,5 +1,39 @@
+@media (max-width: 900px) {
+    .saudacao {
+        font-size: 1.3rem;
+        padding-left: 10px;
+    }
+    #lista-carrinho {
+        padding: 18px 6px 18px 6px;
+    }
+}
+
+main {
+    flex: 1;
+    padding-top: 80px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .saudacao { 
     font-size: 30px;
     padding-top: 10px;
     padding-left: 10px;
+}
+
+.total {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.total h3 {
+    color: #d94140;
+    font-family: 'Knewave', cursive;
+    font-size: 2rem;
+    letter-spacing: 1px;
 }
