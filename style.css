@@ -22,6 +22,14 @@
     h1 {
         display: none;
     }
+    .card-img-top {
+        height: 120px;
+    }
+    .btn-success, .btn-danger {
+        min-width: 120px;
+        font-size: 1rem;
+        padding: 8px 0;
+    }
 }
 
 * {
@@ -62,6 +70,31 @@ iframe {
     gap: 40px;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.card {
+    background: #23232b;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.12);
+    transition: transform 0.18s;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 24px 0 #d94140bb;
+}
+
+.card-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.card-text {
+    color: #e0e0e0;
+    font-size: 1rem;
 }
 
 .image {
@@ -144,4 +177,9 @@ iframe {
  .carousel-control-next {
     width: 5%;
     background: none;
+}
+
+.carousel-inner,
+.carousel-item {
+    overflow: visible !important;
 }
