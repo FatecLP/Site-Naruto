@@ -10,12 +10,16 @@
 }
 
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-color: var(--bg-color);
 }
 
 main{
+    flex: 1;
     width: 90vw;
-    height: 80vh;
+    min-height: 80vh;
     margin: 50px auto;
 }
 

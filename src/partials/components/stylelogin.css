@@ -6,9 +6,12 @@ body {
     background-color: var(--bg-color);
 }
 
-main{
-    width: 70%;
-    margin: 5px auto;
+main {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 form{
@@ -21,7 +24,7 @@ form{
     margin-top: 40px;
 }
 
-button{
+button.btn-login {
     width: 12%;
     margin-top: 30px;
 }
@@ -43,10 +46,6 @@ button{
     transition: all 0.2s;
 }
 
-.input-login:focus{
-    width: 370px;
-}
-
 .form-group{
     width: 50%;
     display: flex;
@@ -57,11 +56,33 @@ button{
 
 label, .form-group small{
     color: var(--text-color) !important;
+    white-space: nowrap;
+}
+
+#email{
+    width: 320px;
+}
+#email:focus{
+    width: 370px;
 }
 
 #senha{
     width: 320px;
 }
+#senha:focus{
+    width: 370px;
+}
+
+#logoutBtn {
+    display: block;
+    margin: 20px auto 0 auto;
+}
+#logoutBtn:hover {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+
 .link-recuperar{
     display: flex;
     flex-direction: column;
