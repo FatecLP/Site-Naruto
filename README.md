@@ -33,6 +33,23 @@ Para acessar o projeto online <strong>clique [AQUI](https://fateclp.github.io/Si
 
 ## ✨ Funcionalidades
 
+### 🛒 Carrinho de Compras
+- Adição de produtos ao carrinho com popup animado de confirmação
+- Carrinho persistente usando localStorage
+- Produtos não se repetem: ao adicionar o mesmo produto, a quantidade é incrementada
+- Visualização do carrinho com lista de produtos, imagem, nome, valor e quantidade
+- Cálculo automático do valor total do carrinho
+- Finalização de compra e limpar carrinho
+
+### 👤 Sistema de Login
+- Login com validação de usuário e senha (dados simulados em localStorage)
+- SessionStorage para manter o usuário logado durante a navegação
+- Logout disponível na página de login
+
+### 🔒 Proteção de Ações
+- Só é possível finalizar a compra se estiver logado (verificação automática)
+- Redirecionamento para login caso tente finalizar compra sem autenticação
+
 ### 🔍 Navegação
 - Barra de navegação responsiva
 - Links para Home, Sobre Nós e Login
