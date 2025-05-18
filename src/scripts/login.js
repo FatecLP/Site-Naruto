@@ -34,3 +34,22 @@ function logado(){
     const user = sessionStorage.getItem("usuario")
     document.querySelector("#nome-usuario").innerHTML = user
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const usuario = sessionStorage.getItem("usuario");
+    if (usuario) {
+        const main = document.querySelector('main');
+        if (main) {
+            main.innerHTML = `
+                <div class="alert alert-info" style="margin-top:40px;">
+                    Você já está logado como <strong>${usuario}</strong>.<br>
+                    <button id="logoutBtn" class="btn btn-danger" style="margin-top:10px;">Fazer logout</button>
+                </div>
+            `;
+            document.getElementById('logoutBtn').onclick = function() {
+                sessionStorage.removeItem("usuario");
+                window.location.reload();
+            }
+        }
+    }
+});
