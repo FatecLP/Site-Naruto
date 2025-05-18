@@ -2,6 +2,15 @@
 @import url(./footer.css);
 @import url(../styles/colors.css);
 
+@media (max-width: 600px) {
+    button.btn-login {
+        width: 100%;
+    }
+    .input-login, #email, #senha {
+        width: 100%;
+    }
+}
+
 body {
     background-color: var(--bg-color);
 }
@@ -14,7 +23,7 @@ main {
     flex-direction: column;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,47 +38,45 @@ button.btn-login {
     margin-top: 30px;
 }
 
-
-.titulo-login{
+.titulo-login {
     font-size: 40px;
     color: var(--text-color);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-bottom: 20px !important;
 }
 
-.input-login{
+.input-login {
     width: 320px;
     height: 30px;
     border-radius: 5px;
     border: none;
     padding: 5px;
-    transition: all 0.2s;
+    transition: width 0.2s;
 }
 
-.form-group{
+.form-group {
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-items: left;
 }
 
-label, .form-group small{
+label, .form-group small {
     color: var(--text-color) !important;
     white-space: nowrap;
 }
 
-#email{
+#email {
     width: 320px;
 }
-#email:focus{
+#email:focus {
     width: 370px;
 }
 
-#senha{
+#senha {
     width: 320px;
 }
-#senha:focus{
+#senha:focus {
     width: 370px;
 }
 
@@ -81,16 +88,4 @@ label, .form-group small{
     background-color: var(--bg-color);
     color: var(--text-color);
     border: 1px solid var(--text-color);
-}
-
-.link-recuperar{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.link-cadastro{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }

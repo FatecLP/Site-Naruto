@@ -4,6 +4,15 @@
 @import url(./src/partials/components/footer.css);
 @import url(./src/partials/components/cart.css);
 
+@keyframes scaleButton {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.07);
+    }
+}
+
 @media (max-width: 600px) {
     header {
         display: flex;
@@ -24,6 +33,11 @@ body {
     background-color: var(--bg-color);
 }
 
+iframe {
+    margin-bottom: 0;
+    display: block;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -32,14 +46,11 @@ body {
     flex-wrap: wrap;
     margin-top: 50px;
     margin-bottom: 50px;
+    max-width: 1200px;
+    width: 100%;
 }
-.card-top {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.card-bottom {
+
+.card-top, .card-bottom {
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
@@ -52,6 +63,7 @@ body {
         no-repeat top center/cover;
     position: relative;
 }
+
 .mod {
     height: 100%;
     width: 100%;
@@ -62,6 +74,7 @@ body {
     opacity: 62%;
     display: flex;
 }
+
 .titulo {
     height: 100%;
     width: 100%;
@@ -71,17 +84,23 @@ body {
     justify-content: end;
     align-items: center;
 }
+
+.titulo h2,
+.titulo p,
+.button-contact {
+    font-family: 'Inter', sans-serif;
+}
+
 .titulo h2 {
     margin-bottom: 10px;
     font-size: 45px;
-    font-family: inter;
     font-weight: var(--bold-inter);
     color: var(--text-color);
 }
+
 .titulo p {
     margin-bottom: 40px;
     font-size: 25px;
-    font-family: inter;
     font-weight: var(--light-inter);
     color: var(--text-color);
 }
@@ -90,29 +109,17 @@ body {
     padding: 14px 20px;
     color: #ffffff;
     background-color: var(--akatsuki-color);
-    font-family: inter;
     font-weight: var(--medium-inter);
     border: 0;
     font-size: 18px;
     margin: 14px 0;
-    transition: animation 0.2s;
-    transition: box-shadow 0.8s;
+    transition: animation 0.2s, box-shadow 0.8s;
     text-transform: uppercase;
     margin-bottom: 140px;
 }
 .button-contact:hover {
     animation: scaleButton 0.8s alternate infinite;
     box-shadow: 0 0 10px 0 #d94140;
-}
-
-
-@keyframes scaleButton {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.07);
-    }
 }
 
 .carousel-control-prev-icon.bg-dark,

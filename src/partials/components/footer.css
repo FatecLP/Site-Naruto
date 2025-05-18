@@ -2,22 +2,28 @@
 @import url(../styles/fonts.css);
 
 footer {
-    height: 100px;
+    min-height: 100px;
+    margin-top: 0;
     background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 address {
     display: flex;
     align-items: center;
     margin: 0;
 }
+
 address h4 {
-    font-family: inter;
+    font-family: "Inter", sans-serif;
     font-weight: var(--medium-inter);
     font-size: 20px;
     color: var(--text-color);
     margin: 0;
     font-style: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
