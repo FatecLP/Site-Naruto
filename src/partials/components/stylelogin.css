@@ -1,5 +1,5 @@
-@import url(header.css);
-@import url(footer.css);
+@import url(./header.css);
+@import url(./footer.css);
 @import url(../styles/colors.css);
 
 body {
