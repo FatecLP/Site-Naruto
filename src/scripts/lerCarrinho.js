@@ -47,6 +47,10 @@ document.addEventListener('DOMContentLoaded', function() {
     totalElement.style.marginTop = '20px'; // adiciona uma margem superior
     lista.appendChild(totalElement); // adiciona o total ao final da lista
 
+    // container para os botões
+    const botoesContainer = document.createElement('div');
+    botoesContainer.className = 'botoes-carrinho';
+
     // finalizar compra
     const botaoFinalizar = document.createElement('button'); // cria um botão para finalizar a compra
     botaoFinalizar.innerHTML = 'Finalizar Compra'; // define o texto do botão
@@ -62,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = "../pages/login.html"; // redireciona para a página de login
         }
     });
-    lista.appendChild(botaoFinalizar);
+    botoesContainer.appendChild(botaoFinalizar);
 
     // limpar carrinho
     const botaoLimpar = document.createElement('button'); // cria um botão para limpar o carrinho
@@ -72,5 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.removeItem('carrinhoDados'); // remove os dados do carrinho do localStorage
         location.reload();
     });
-    lista.appendChild(botaoLimpar);
+    botoesContainer.appendChild(botaoLimpar);
+
+    lista.appendChild(botoesContainer);
 });
