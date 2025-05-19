@@ -21,11 +21,13 @@ Para acessar o projeto online <strong>clique [AQUI](https://fateclp.github.io/Si
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)]()
 [![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&logoColor=white)]()
+[![JavaScript](https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square)]()
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white)]()
 [![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?logo=font-awesome&logoColor=white)]()
 
 - **HTML5** - Estrutura de conteúdo do site
 - **CSS3** - Folha de estillos para estilização do site
+- **JavaScript** - Interatividade e JSON para armazenamento de dados
 - **Bootstrap 5** - Framework para design e componentes responsivos
 - **Font Awesome 6** - Biblioteca para Ícones
 - **Google Fonts** - Fonte Knewave e Inter
