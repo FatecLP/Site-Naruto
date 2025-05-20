@@ -13,7 +13,7 @@
 - Nickolas Lopes Araújo
 
 ## 🧑🏻 Professor
-- Bruno Zolotareff dos Santos (Desenvolvimento Web I: FATEC Diadema - Luigi Papaiz)
+- PhD - Bruno Zolotareff dos Santos (DW-I: FATEC Diadema - Luigi Papaiz)
 
 ## 📝 Descrição do Projeto
 
