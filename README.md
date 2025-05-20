@@ -12,6 +12,9 @@
 - Murilo de Oliveira Sartori
 - Nickolas Lopes Araújo
 
+## 🧑🏻 Professor
+- Bruno Zolotareff dos Santos (Desenvolvimento Web I: FATEC Diadema - Luigi Papaiz)
+
 ## 📝 Descrição do Projeto
 
 **Akatsuki's Shop** é um e-commerce temático baseado na organização Akatsuki do anime Naruto. O site oferece diversos produtos inspirados nos personagens, incluindo acessórios, roupas e itens de colecionador. <br><br>
