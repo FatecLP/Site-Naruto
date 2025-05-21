@@ -43,7 +43,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalElement = document.createElement('div'); // cria um elemento div para o total
     totalElement.classList.add('total'); // adiciona a classe total
     totalElement.style.textAlign = 'center'; // centraliza o texto
-    totalElement.innerHTML = `<h3 style="color: white;">Total: R$ ${total.toFixed(2).replace('.', ',')}</h3>`; // formata o total para duas casas decimais e substitui o ponto por vírgula
+    totalElement.innerHTML = `
+            <h3 style="color: white; margin-top: 40px;">Total: R$ ${total
+                .toFixed(2)
+                .replace(".", ",")}
+            </h3>
+            <h4 style="color: white; margin-top: 45px; font-size: 18px;">Métodos de pagamento:</h4>
+            <form style="display: flex; gap: 2rem; justify-content: center; align-items: center; margin-top: 20px;">
+    
+                <label style="display: flex; align-items: center; cursor: pointer;">
+                    <input type="radio" name="pagamento" style="margin-right: 8px;">
+                    <img src="https://img.icons8.com/?size=100&id=Dk4sj0EM4b20&format=png&color=000000" style="width: 44px; height: auto;">
+                </label>
+
+                <label style="display: flex; align-items: center; cursor: pointer;">
+                    <input type="radio" name="pagamento" style="margin-right: 8px;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/893/893081.png" style="width: 50px; height: auto;">
+                </label>
+
+                <label style="display: flex; align-items: center; cursor: pointer;">
+                    <input type="radio" name="pagamento" style="margin-right: 8px;">
+                    <img src="https://logodownload.org/wp-content/uploads/2019/09/boleto-logo.png" style="width: 50px; height: auto;">
+                </label>
+
+            </form>
+            `; // formata o total para duas casas decimais e substitui o ponto por vírgula
     totalElement.style.marginTop = '20px'; // adiciona uma margem superior
     lista.appendChild(totalElement); // adiciona o total ao final da lista
 
