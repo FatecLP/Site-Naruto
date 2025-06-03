@@ -51,6 +51,17 @@ Para acessar o projeto online <strong>clique [AQUI](https://fateclp.github.io/Si
 - SessionStorage para manter o usuário logado durante a navegação
 - Logout disponível na página de login
 
+### ⚙️ Login Administrativo
+- Usuario e senha para acesso administrativo que permite configurar e gerenciar o sistema <br><br>
+  **User**: 
+  ```bash
+  admin
+  ```
+  **Password**:
+  ```bash
+  Administrator@123
+  ```
+
 ### 🔒 Proteção de Ações
 - Só é possível finalizar a compra se estiver logado (verificação automática)
 - Redirecionamento para login caso tente finalizar compra sem autenticação
