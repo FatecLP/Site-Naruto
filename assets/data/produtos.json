@@ -1,0 +1,47 @@
+[
+  {
+    "nome": "Anel Akatsuki",
+    "preco": 20.00,
+    "imagem": "./assets/img/0d3583bb20d31fe633af9f00ac21a9de.jpg"
+  },
+  {
+    "nome": "Máscara Tobi",
+    "preco": 30.00,
+    "imagem": "./assets/img/2564048835_1.webp"
+  },
+  {
+    "nome": "Anel Akatsuki",
+    "preco": 25.00,
+    "imagem": "./assets/img/46a70bd87c4c4262ea336e986c3bdf9f.jpg"
+  },
+  {
+    "nome": "Anel Akatsuki",
+    "preco": 23.00,
+    "imagem": "./assets/img/d61690e9beab74543d1756d31adacbad.jpg"
+  },
+  {
+    "nome": "Manto Hokage Cor escura",
+    "preco": 60.00,
+    "imagem": "./assets/img/sg-11134201-7qvd6-lgi4mhsyzagle6.jpg"
+  },
+  {
+    "nome": "Camiseta Membros da Akatsuki",
+    "preco": 40.00,
+    "imagem": "./assets/img/akatsuki-shirt-naruto-shirt-anime-shirt-graphic-tee-2-8aez9.jpg"
+  },
+  {
+    "nome": "Manto Hokage",
+    "preco": 70.00,
+    "imagem": "./assets/img/c4634924ec2b544aaa7bfb5d4394f5cb.jpg"
+  },
+  {
+    "nome": "Moletom Itachi",
+    "preco": 80.00,
+    "imagem": "./assets/img/br-11134207-7r98o-ltyfecyh0f398c.jpg"
+  },
+  {
+    "nome": "Dry-fit Akatsuki",
+    "preco": 45.00,
+    "imagem": "./assets/img/br-11134207-7r98o-m6gtr2kyxnao95.jpg"
+  }
+]
