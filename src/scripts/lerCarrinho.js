@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     let html = '<h2 style="color: white;">Produtos no Carrinho</h2><div class="row">';
-    carrinho.forEach(produto => { // percorre todos os produtos do carrinho
-        // cria o HTML para cada produto
+    carrinho.forEach((produto, idx) => { // percorre todos os produtos do carrinho
+        // adiciona o HTML para cada produto
         html += `
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="card mb-3">
@@ -24,7 +24,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="card-body">
                         <h5 class="card-title">${produto.nome}</h5>
                         <p class="card-text">${produto.valor}</p>
-                        <p class="card-text"><strong>Quantidade:</strong> ${produto.qtd || 1}</p>
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+                            <button class="btn btn-diminuir" data-idx="${idx}" style="min-width:32px; background:#d94140; color:white; border:none; font-weight:bold;">-</button>
+                            <span class="qtd-span" id="qtd-span-${idx}" style="min-width: 32px; display: inline-block; text-align: center; color: white; font-weight: bold;">${produto.qtd || 1}</span>
+                            <button class="btn btn-aumentar" data-idx="${idx}" style="min-width:32px; background:#d94140; color:white; border:none; font-weight:bold;">+</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -127,4 +131,74 @@ document.addEventListener('DOMContentLoaded', function() {
     botoesContainer.appendChild(botaoLimpar);
 
     lista.appendChild(botoesContainer);
+
+    // adiciona eventos para os botões de aumentar/diminuir quantidade
+    setTimeout(() => {
+        const botoesAumentar = document.querySelectorAll('.btn-aumentar');
+        const botoesDiminuir = document.querySelectorAll('.btn-diminuir');
+        botoesAumentar.forEach(btn => {
+            btn.onclick = function(e) {
+                e.preventDefault();
+                const idx = parseInt(this.getAttribute('data-idx')); // obtém o índice do produto
+                let carrinho = JSON.parse(localStorage.getItem('carrinhoDados')) || [];
+                if (carrinho[idx]) { // verifica se o item existe no carrinho
+                    carrinho[idx].qtd = (carrinho[idx].qtd || 1) + 1;
+                    localStorage.setItem('carrinhoDados', JSON.stringify(carrinho));
+                    document.getElementById('qtd-span-' + idx).textContent = carrinho[idx].qtd; // atualiza o span de quantidade
+                    atualizarTotal();
+                    if (window.mostrarPopup) {
+                        window.mostrarPopup(`Item adicionado: ${carrinho[idx].nome}`);
+                    }
+                }
+            };
+        });
+        botoesDiminuir.forEach(btn => {
+            btn.onclick = function(e) {
+                e.preventDefault();
+                let carrinho = JSON.parse(localStorage.getItem('carrinhoDados')) || [];
+                const span = this.parentElement.querySelector('.qtd-span');
+                const nome = this.closest('.card').querySelector('.card-title').textContent;
+                const valor = this.closest('.card').querySelector('.card-text').textContent;
+                const realIdx = carrinho.findIndex(item => item.nome === nome && item.valor === valor); // encontra o índice real do item no carrinho
+                if (realIdx !== -1) { // verifica se o item existe no carrinho
+                    carrinho[realIdx].qtd = (carrinho[realIdx].qtd || 1) - 1;
+                    if (carrinho[realIdx].qtd <= 0) { // se a quantidade for menor ou igual a zero, remove o item do carrinho
+                        const nomeRemovido = carrinho[realIdx].nome;
+                        carrinho.splice(realIdx, 1);
+                        localStorage.setItem('carrinhoDados', JSON.stringify(carrinho));
+                        this.closest('.col-12').remove();
+                        atualizarTotal();
+                        if (window.mostrarPopup) {
+                            window.mostrarPopup(`Item removido: ${nomeRemovido}`);
+                        }
+                        return;
+                    } else { // se a quantidade for maior que zero, atualiza o carrinho
+                        localStorage.setItem('carrinhoDados', JSON.stringify(carrinho));
+                        span.textContent = carrinho[realIdx].qtd;
+                        atualizarTotal();
+                        if (window.mostrarPopup) {
+                            window.mostrarPopup(`Item removido: ${carrinho[realIdx].nome}`);
+                        }
+                    }
+                }
+            };
+        });
+
+        // função para atualizar o total
+        function atualizarTotal() {
+            let carrinho = JSON.parse(localStorage.getItem('carrinhoDados')) || [];
+            if (carrinho.length === 0) {
+                lista.innerHTML = '<p style="color: white;">O carrinho está vazio.</p>';
+                return;
+            }
+            const total = carrinho.reduce((acc, produto) => {
+                const valor = parseFloat(produto.valor.replace('R$', '').replace(',', '.'));
+                return acc + (valor * (produto.qtd || 1)); // calcula o total
+            }, 0);
+            const totalH3 = document.querySelector('.total h3');
+            if (totalH3) {
+                totalH3.innerHTML = `Total: R$ ${total.toFixed(2).replace('.', ',')}`; // formata o total para duas casas decimais e substitui o ponto por vírgula
+            }
+        }
+    }, 0);
 });
