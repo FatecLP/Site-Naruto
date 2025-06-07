@@ -52,7 +52,7 @@ Para acessar o projeto online <strong>clique [AQUI](https://fateclp.github.io/Si
 - Logout disponível na página de login
 
 ### ⚙️ Login Administrativo
-- Usuario e senha para acesso administrativo que permite configurar e gerenciar o sistema <br><br>
+- Usuário e senha para acesso administrativo que permite configurar e gerenciar o sistema <br><br>
   **User**: 
   ```bash
   admin

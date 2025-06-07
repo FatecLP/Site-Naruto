@@ -79,8 +79,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const botaoFinalizar = document.createElement('button'); // cria um botão para finalizar a compra
     botaoFinalizar.innerHTML = 'Finalizar Compra'; // define o texto do botão
     botaoFinalizar.classList.add('btn', 'btn-success'); // adiciona as classes btn e btn-success
-    botaoFinalizar.addEventListener('click', function() {
-        // verifica se ta logado
+    botaoFinalizar.addEventListener('click', function(e) {
+        // verifica se algum método de pagamento foi selecionado
+        const metodoSelecionado = document.querySelector('input[name="pagamento"]:checked');
+        if (!metodoSelecionado) {
+            e.preventDefault(); // impede o comportamento padrão
+            if (window.mostrarPopup) {
+                window.mostrarPopup('Selecione uma forma de pagamento!');
+            } else {
+                alert('Selecione uma forma de pagamento!');
+            }
+            return;
+        }
         if (estaLogado()) { 
             alert('Compra finalizada com sucesso!');
             localStorage.removeItem('carrinhoDados'); // limpa o carrinho
@@ -91,6 +101,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     botoesContainer.appendChild(botaoFinalizar);
+
+    // adicionar evento para popup ao selecionar método de pagamento
+    setTimeout(() => {
+        const radiosPagamento = document.querySelectorAll('input[name="pagamento"]');
+        radiosPagamento.forEach((radio, idx) => {
+            radio.onclick = function() {
+                if (window.mostrarPopup) {
+                    if (idx === 0) window.mostrarPopup('Método selecionado: Pix');
+                    else if (idx === 1) window.mostrarPopup('Método selecionado: Cartão');
+                    else if (idx === 2) window.mostrarPopup('Método selecionado: Boleto');
+                }
+            };
+        });
+    }, 0);
 
     // limpar carrinho
     const botaoLimpar = document.createElement('button'); // cria um botão para limpar o carrinho

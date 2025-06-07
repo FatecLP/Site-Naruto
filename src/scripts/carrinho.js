@@ -83,4 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
     adicionarCarrinho();
 });
 
-window.adicionarCarrinho = adicionarCarrinho; // expõe a função para que possa ser chamada de outros scripts
+// expondo as funções para que possam ser usadas em outros scripts
+window.adicionarCarrinho = adicionarCarrinho;
+window.mostrarPopup = mostrarPopup;
