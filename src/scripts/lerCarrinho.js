@@ -197,7 +197,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 0);
             const totalH3 = document.querySelector('.total h3');
             if (totalH3) {
-                totalH3.innerHTML = `Total: R$ ${total.toFixed(2).replace('.', ',')}`; // formata o total para duas casas decimais e substitui o ponto por vírgula
+                // efeito de dissolver
+                totalH3.style.transition = 'opacity 0.3s';
+                totalH3.style.opacity = '0';
+                setTimeout(() => {
+                    totalH3.innerHTML = `Total: R$ ${total.toFixed(2).replace('.', ',')}`;
+                    totalH3.style.opacity = '1';
+                }, 300);
             }
         }
     }, 0);
