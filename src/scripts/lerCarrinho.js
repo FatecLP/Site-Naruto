@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="card-body">
                         <h5 class="card-title">${produto.nome}</h5>
                         <p class="card-text">${produto.valor}</p>
-                        <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
-                            <button class="btn btn-diminuir" data-idx="${idx}" style="min-width:32px; background:#d94140; color:white; border:none; font-weight:bold;">-</button>
-                            <span class="qtd-span" id="qtd-span-${idx}" style="min-width: 32px; display: inline-block; text-align: center; color: white; font-weight: bold;">${produto.qtd || 1}</span>
-                            <button class="btn btn-aumentar" data-idx="${idx}" style="min-width:32px; background:#d94140; color:white; border:none; font-weight:bold;">+</button>
+                        <div class="qtd-container" style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+                            <button class="btn btn-diminuir" data-idx="${idx}">-</button>
+                            <span class="qtd-span" id="qtd-span-${idx}">${produto.qtd || 1}</span>
+                            <button class="btn btn-aumentar" data-idx="${idx}">+</button>
                         </div>
                     </div>
                 </div>
@@ -48,28 +48,24 @@ document.addEventListener('DOMContentLoaded', function() {
     totalElement.classList.add('total'); // adiciona a classe total
     totalElement.style.textAlign = 'center'; // centraliza o texto
     totalElement.innerHTML = `
-            <h3 style="color: white; margin-top: 40px;">Total: R$ ${total
+            <h3>Total: R$ ${total
                 .toFixed(2)
                 .replace(".", ",")}
             </h3>
-            <h4 style="color: white; margin-top: 45px; font-size: 18px;">Métodos de pagamento:</h4>
-            <form style="display: flex; gap: 2rem; justify-content: center; align-items: center; margin-top: 20px;">
-    
-                <label style="display: flex; align-items: center; cursor: pointer;">
-                    <input type="radio" name="pagamento" style="margin-right: 8px;">
-                    <img src="https://img.icons8.com/?size=100&id=Dk4sj0EM4b20&format=png&color=000000" style="width: 44px; height: auto;">
+            <h4>Métodos de pagamento:</h4>
+            <form>
+                <label>
+                    <input type="radio" name="pagamento">
+                    <img src="https://img.icons8.com/?size=100&id=Dk4sj0EM4b20&format=png&color=000000">
                 </label>
-
-                <label style="display: flex; align-items: center; cursor: pointer;">
-                    <input type="radio" name="pagamento" style="margin-right: 8px;">
-                    <img src="https://cdn-icons-png.flaticon.com/512/893/893081.png" style="width: 50px; height: auto;">
+                <label>
+                    <input type="radio" name="pagamento">
+                    <img src="https://cdn-icons-png.flaticon.com/512/893/893081.png">
                 </label>
-
-                <label style="display: flex; align-items: center; cursor: pointer;">
-                    <input type="radio" name="pagamento" style="margin-right: 8px;">
-                    <img src="https://logodownload.org/wp-content/uploads/2019/09/boleto-logo.png" style="width: 50px; height: auto;">
+                <label>
+                    <input type="radio" name="pagamento">
+                    <img src="https://logodownload.org/wp-content/uploads/2019/09/boleto-logo.png">
                 </label>
-
             </form>
             `; // formata o total para duas casas decimais e substitui o ponto por vírgula
     totalElement.style.marginTop = '20px'; // adiciona uma margem superior
